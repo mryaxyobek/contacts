@@ -64,3 +64,100 @@ button {
 a {
     text-decoration: none;
 }
+
+/* dark mode  */
+.dark-mode {
+    /* for dark mode */
+    --darkModeDisplayNone: block;
+    --darkModeDisplayBlock: none;
+    --heading-color:#F1F6F9;
+}
+
+/* header  */
+
+
+.header {
+    padding: 14px 0;
+    margin-bottom: 50px;
+}
+
+.header-parent {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.dark-mode-btn-wrapper{
+    position: relative;
+}
+.website-codes-link,
+.dark-mode-btn {
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    background: #F1F6F9;
+    color: #394867;
+    font-size: 14px;
+    padding: 6px 10px;
+    transition: background-color 0.4s ease,color 0.4s ease,opacity 0.2s ease;
+}
+.website-codes-link:hover,
+.dark-mode-btn:hover{
+    background: #394867;  
+    color: #fff;
+}
+.website-codes-link:active,
+.dark-mode-btn:active{
+    opacity: 0.7;
+}
+.website-codes-link:focus,
+.dark-mode-btn:focus{
+    outline: none;
+    box-shadow:0 0 1px 1px #9BA4B5;
+}
+.website-codes-link svg {
+    width: 20px;
+    height: 20px;
+    margin-left: 3px;
+}
+
+.logo-link {
+    font-size: 28px;
+    color: var(--heading-color);
+}
+.dark-mode-btn{
+    min-width: 112px;
+}
+.moon-icon,.sun-icon{
+    width: 20px;
+    height: 20px;
+    margin-right: 3px;
+}
+.moon-icon,.dark-mode-text {
+    display: var(--darkModeDisplayBlock);
+}
+.sun-icon,.light-mode-text {
+    display: var(--darkModeDisplayNone);
+}
+
+/* dark filter  */
+
+.dark-filter{
+    display: block;
+    position:fixed;
+    z-index: -1;
+    width: 1px;
+    height:1px;
+    top: -1px;
+    left: calc(50% - 0px);
+    background: #212A3E;
+    border-radius:0 0 100vw 100vw;
+    transition: all 0.4s ease;
+}
+.dark-filter-run{
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    border-radius: 0px;
+}
