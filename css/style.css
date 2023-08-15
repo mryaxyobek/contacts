@@ -330,3 +330,103 @@ a {
 .add-contact-btn:active {
     opacity: 0.7;
 }
+
+/* list  */
+.contact-list {
+    width: 100%;
+    border-radius: 6px;
+}
+
+.contact-list-child {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 20px;
+}
+
+.contact-list-child:nth-child(even) {
+    background: var(--list-child-color);
+}
+
+.contact-list-child:not(:last-child) {
+    border-bottom: 1.5px solid #9BA4B5;
+}
+
+.list-child-profile-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.list-child-profile-wrapper img {
+    width: 70px;
+    height: 70px;
+    border-radius: 100%;
+    border: 1px solid #9DB2BF;
+    margin-right: 6px;
+}
+
+
+.list-child-title {
+    color: var(--heading-color);
+    font-size: 17px;
+    font-weight: 600;
+    margin-bottom: 2px;
+
+}
+
+.phone-number {
+    font-size: 15px;
+    color: var(--dark-blue);
+}
+
+.edit-btn-wrapper div {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    margin-bottom: 3px;
+}
+
+.edit-btn,
+.delete-btn,
+.contact-info-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 27px;
+    height: 27px;
+    border-radius: 4px;
+    background: transparent;
+    border: 0.5px solid var(--dark-blue);
+}
+
+.edit-icon,
+.info-icon {
+    color: var(--dark-blue);
+}
+
+.contact-info-btn span {
+    color: var(--dark-blue);
+    font-size: 12px;
+}
+
+.edit-btn:focus,
+.delete-btn:focus,
+.contact-info-btn:focus {
+    outline: 1px solid var(--dark-blue);
+}
+
+.delete-btn {
+    margin-left: 3px;
+}
+
+.contact-info-btn {
+    width: 100%;
+    padding: 0 4px;
+    color: #394867;
+}
+
+.info-icon {
+    width: 16px;
+    height: 16px;
+    margin-left: 3px;
+}
