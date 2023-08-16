@@ -74,9 +74,7 @@ p {
 section {
     padding: 60px 0;
 }
-.hidden{
-    display: none;
-}
+
 button {
     font-family: 'Outfit', sans-serif;
     border: none;
@@ -454,6 +452,20 @@ a {
     border: 0.5px solid var(--dark-blue);
 }
 
+.edit-btn:focus,
+.delete-btn:focus,
+.contact-info-btn:focus {
+    outline: 1px solid var(--dark-blue);
+}
+
+.delete-btn {
+    border-color: #ff7c7c;
+}
+
+.delete-btn:focus {
+    outline-color: #ff7c7c;
+}
+
 .edit-icon,
 .info-icon {
     color: var(--dark-blue);
@@ -464,11 +476,6 @@ a {
     font-size: 12px;
 }
 
-.edit-btn:focus,
-.delete-btn:focus,
-.contact-info-btn:focus {
-    outline: 1px solid var(--dark-blue);
-}
 
 .delete-btn {
     margin-left: 3px;
@@ -499,6 +506,10 @@ a {
     height: 54px;
     box-shadow: 0.5px 1px 3px 0px #444444a0;
     z-index: 3;
+}
+
+.hidden {
+    display: none;
 }
 
 @media only screen and (max-width:900px) {
@@ -534,9 +545,10 @@ a {
 }
 
 @media only screen and (max-width:780px) {
-    html{
+    html {
         height: 100%;
     }
+
     .header {
         margin: 0;
     }
@@ -545,11 +557,13 @@ a {
         width: 100vw;
         height: 100vh;
     }
-    .main-parent{
+
+    .main-parent {
         align-items: start;
         height: 100vh;
         overflow-x: hidden;
     }
+
     .form-parent,
     .list-parent {
         padding-top: 40px;
@@ -593,6 +607,7 @@ a {
         max-width: 500px;
         margin: 0 auto;
     }
+
     .profile-parent {
         height: 200px;
     }
@@ -671,21 +686,29 @@ a {
         right: 20px;
         bottom: 20px;
     }
-    .edit-btn,.delete-btn,.contact-info-btn{
+
+    .edit-btn,
+    .delete-btn,
+    .contact-info-btn {
         width: 24px;
         height: 24px;
     }
-    .contact-info-btn{
+
+    .contact-info-btn {
         width: 100%;
     }
-    .contact-info-btn span{
+
+    .contact-info-btn span {
         font-size: 10px;
     }
-    .contact-info-btn svg{
+
+    .contact-info-btn svg {
         width: 14px;
         height: 14px;
     }
-    .edit-icon,.delete-btn img{
+
+    .edit-icon,
+    .delete-btn img {
         width: 18px;
         height: 18px;
     }
