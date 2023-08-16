@@ -525,6 +525,7 @@ a {
         position: absolute;
         max-width: 100%;
         top: 0;
+        padding: 0 20px;
     }
     .list-parent{
         right: 0;
@@ -545,5 +546,68 @@ a {
     }
     .profile-parent{
         height: 200px;
+    }
+    .padding-0{
+        padding: 0;
+    }
+}
+@media only screen and (max-width:530px) {
+    *:focus{
+        outline: none;
+        color: auto;
+        border-width:auto;
+    }
+    .dark-mode-btn,.website-codes-link{
+        min-width: auto;
+        width: 40px !important;
+        height: 40px;
+    }
+    .website-codes-link svg,.sun-icon,.moon-icon{
+        margin: 0;
+    }
+    .dark-mode-text,.light-mode-text,.website-codes-link span{
+        display: none;
+    }
+    .contact-form{
+        max-width: 100%;
+        margin: 0 auto;
+    }  
+    .list-child-profile-wrapper img{
+        width: 56px;
+        height: 56px;
+    }
+    .list-child-title{
+        font-size: 15px;
+        line-height: 18px;
+    }   
+    .phone-number{
+        font-size: 12px;
+        line-height: 16px;
+    }
+}
+@media only screen and (max-width:420px) {
+    .logo-link{
+        font-size: 24px;
+    }
+    .form-title,.list-title{
+        font-size: 19px;
+    }
+    .profile-parent{
+        height: 170px;
+    }
+    .contact-adder-btn{
+        right: 20px;
+        bottom: 20px;
+    }
+}
+@media only screen and (max-width:325px) {
+    .logo-link{
+        font-size: 22px;
+    }
+    .form-title,.list-title{
+        font-size: 18px;
+    }
+    .profile-parent{
+        height: 150px;
     }
 }
