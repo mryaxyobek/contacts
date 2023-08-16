@@ -15,7 +15,11 @@ elContactAddBtn.addEventListener('click', function () {
     // icons
     const elContactAddIcon = document.querySelector('.contact-add-icon');
     const elContactListcon = document.querySelector('.contact-list-icon');
+    // dark filter 
+    const elListDarkFilter = document.querySelector('.list-dark-filter');
     // parents movement
     elContactForm.classList.toggle('form-parent-run');
     elContactList.classList.toggle('list-parent-run');
+    // dark filter movement
+    elContactList.classList.toggle('hidden-and-dark');
 });
