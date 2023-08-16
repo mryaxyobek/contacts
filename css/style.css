@@ -9,6 +9,8 @@
     --light-blue: #9DB2BF;
     --light-gray: #394867;
     --dark-gray: #F1F6F9;
+    /* form color  */
+    --white-to-darkColor: #fff;
 }
 
 *:focus {
@@ -72,7 +74,9 @@ p {
 section {
     padding: 60px 0;
 }
-
+.hidden{
+    display: none;
+}
 button {
     font-family: 'Outfit', sans-serif;
     border: none;
@@ -123,10 +127,11 @@ a {
     --light-blue: #9DB2BF;
     --light-gray: #F1F6F9;
     --dark-gray: #394867;
+    /* form color  */
+    --white-to-darkColor: #212A3E;
 }
 
 /* header  */
-
 
 .header {
     padding: 14px 0;
@@ -305,10 +310,10 @@ a {
     align-items: center;
     justify-content: center;
     position: absolute;
-    width: 43px;
-    height: 43px;
-    bottom: -20px;
-    right: 50px;
+    width: 50px;
+    height: 50px;
+    bottom: -25px;
+    right: 20px;
     border-radius: 100%;
     background: var(--list-child-color);
     box-shadow: 0 1px 1px 0px #33333357;
@@ -373,7 +378,7 @@ a {
     position: absolute;
     width: 100%;
     height: 100%;
-    filter:blur(0px);
+    filter: blur(0px);
     top: 0;
     bottom: 0;
     right: 0;
@@ -421,7 +426,7 @@ a {
     font-size: 17px;
     font-weight: 600;
     margin-bottom: 2px;
-
+    text-transform: capitalize;
 }
 
 .phone-number {
@@ -482,7 +487,7 @@ a {
 }
 
 .contact-adder-btn {
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
     position: fixed;
@@ -529,15 +534,22 @@ a {
 }
 
 @media only screen and (max-width:780px) {
+    html{
+        height: 100%;
+    }
     .header {
         margin: 0;
     }
 
     .main {
         width: 100vw;
-        overflow: hidden;
+        height: 100vh;
     }
-
+    .main-parent{
+        align-items: start;
+        height: 100vh;
+        overflow-x: hidden;
+    }
     .form-parent,
     .list-parent {
         padding-top: 40px;
@@ -550,8 +562,8 @@ a {
         top: 0;
         padding: 40px 20px 0;
         z-index: 2;
-        background: #fff;
-        height: 100%;
+        background: var(--white-to-darkColor);
+        height: 100vh;
     }
 
     .list-parent {
@@ -570,7 +582,7 @@ a {
 
     .hidden-and-dark {
         display: block;
-        filter:blur(4px);
+        filter: blur(4px);
     }
 
     .form-title {
@@ -581,13 +593,16 @@ a {
         max-width: 500px;
         margin: 0 auto;
     }
-
     .profile-parent {
         height: 200px;
     }
 
     .padding-0 {
         padding: 0;
+    }
+
+    .contact-adder-btn {
+        display: flex;
     }
 }
 
@@ -655,6 +670,24 @@ a {
     .contact-adder-btn {
         right: 20px;
         bottom: 20px;
+    }
+    .edit-btn,.delete-btn,.contact-info-btn{
+        width: 24px;
+        height: 24px;
+    }
+    .contact-info-btn{
+        width: 100%;
+    }
+    .contact-info-btn span{
+        font-size: 10px;
+    }
+    .contact-info-btn svg{
+        width: 14px;
+        height: 14px;
+    }
+    .edit-icon,.delete-btn img{
+        width: 18px;
+        height: 18px;
     }
 }
 

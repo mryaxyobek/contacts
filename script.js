@@ -22,4 +22,7 @@ elContactAddBtn.addEventListener('click', function () {
     elContactList.classList.toggle('list-parent-run');
     // dark filter movement
     elContactList.classList.toggle('hidden-and-dark');
+    // icons movement
+    elContactAddIcon.classList.toggle('hidden');
+    elContactListcon.classList.toggle('hidden');
 });
