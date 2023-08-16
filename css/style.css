@@ -449,3 +449,28 @@ a {
     height: 16px;
     margin-left: 3px;
 }
+
+@media only screen and (max-width:900px) {
+    .logo-link{
+        font-size: 26px;
+    }
+    .form-title,.list-title{
+        font-size: 22px;
+    }
+    .form-parent{
+        max-width: 350px;
+    }
+    .contact-form{
+        max-width: 330px;
+    }
+    .profile-parent{
+        height: 160px;
+    }
+    .list-child-profile-wrapper img{
+        width: 60px;
+        height: 60px;
+    }
+    .contact-list-child{
+        padding: 14px;
+    }
+}
