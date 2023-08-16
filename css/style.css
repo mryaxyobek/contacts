@@ -130,6 +130,7 @@ a {
 .header {
     padding: 14px 0;
     margin-bottom: 50px;
+    background: var(--list-child-color);
 }
 
 .header-parent {
@@ -152,6 +153,7 @@ a {
     font-size: 14px;
     padding: 6px 10px;
     transition: background-color 0.4s ease, color 0.4s ease, opacity 0.2s ease;
+    border:1.5px solid  var(--dark-blue);
 }
 
 .website-codes-link:hover,
@@ -159,7 +161,10 @@ a {
     background:var(--light-gray);
     color: var(--dark-gray) ;
 }
-
+.website-codes-link:focus,
+.dark-mode-btn:focus{
+    outline-offset: 1.5px;
+}
 .website-codes-link:active,
 .dark-mode-btn:active {
     opacity: 0.7;
@@ -226,7 +231,21 @@ a {
     display: flex;
     align-items: start;
 }
-
+.form-parent{
+    max-width: 400px;
+    width: 100%;
+}
+.form-title,.list-title{
+    font-size: 24px;
+    color: var(--heading-color);
+    margin-bottom: 10px;
+}
+.list-title{
+    text-align: center;
+}
+.list-parent{
+    width: 100%;
+}
 .contact-form {
     display: flex;
     position: sticky;
