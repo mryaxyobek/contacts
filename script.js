@@ -1,7 +1,6 @@
 // buttons 
 const elDarkModeBtn = document.querySelector('#js-dark-mode-btn');
 const elContactAddBtn = document.querySelector('.js-contact-adder-btn');
-const elCancleBtn = document.querySelector('.cancle-btn');
 const elAddContactBtn = document.querySelector('.add-contact-btn');
 // contact form 
 let elContactForm = document.querySelector('.contact-form');
@@ -95,15 +94,70 @@ elContactForm.addEventListener('submit', function (e) {
             el.parentElement.parentElement.parentElement.remove();
         });
     });
+    // selectors
+    const elEditBtn = document.querySelectorAll('.edit-btn');
+    const elConfirmBtn = document.querySelector('.confirm-btn');
+    const elCancleBtn = document.querySelector('.cancel-btn');
+    const elFormBtnsWrapper = document.querySelector('.form-buttons-wrapper');
+    // edit btn run 
+    elEditBtn.forEach(el => {
+        el.addEventListener('click', () => {
+            // confirm and cancel buttons
+            elAddContactBtn.setAttribute('type', 'button')
+            elAddContactBtn.classList.add('hidden');
+            elFormBtnsWrapper.classList.remove('hidden');
+            // 
+            elContactProfileParent.setAttribute('style', `background-image:url( ${el.parentElement.parentElement.previousElementSibling.childNodes[1].getAttribute('src')}`);
+            elContactProfileImage.setAttribute('src', `${el.parentElement.parentElement.previousElementSibling.childNodes[1].getAttribute('src')}`);
+            elNameInput.value = el.parentElement.parentElement.previousElementSibling.childNodes[3].childNodes[1].textContent;
+            elPhoneNumberInput.value = el.parentElement.parentElement.previousElementSibling.childNodes[3].childNodes[3].textContent;
+            // confirm 
+            elConfirmBtn.addEventListener('click', function () {
+                const bg = el.parentElement.parentElement.previousElementSibling;
+                bg.childNodes[1].setAttribute('src', `${elContactProfileImage.getAttribute('src')}`);
+                el.parentElement.parentElement.previousElementSibling.childNodes[3].childNodes[1].textContent = `${elNameInput.value}`;
+                el.parentElement.parentElement.previousElementSibling.childNodes[3].childNodes[3].textContent = `${elPhoneNumberInput.value}`;
+                // 
+                elAddContactBtn.classList.remove('hidden');
+                elAddContactBtn.setAttribute('type', 'submit')
+                elFormBtnsWrapper.classList.add('hidden');
+                // profile image 
+                elContactProfileParent.setAttribute('style', 'background-image:url(../images/profile-img.jpg);');
+                elContactProfileImage.setAttribute('src', './images/profile-img.jpg');
+                // inputs value 
+                elNameInput.value = '';
+                elPhoneNumberInput.value = '';
+                elRealtionshipInput.value = '';
+                elEmailInput.value = '';
+                elContactFormTextarea.value = '';
+            });
+            elCancleBtn.addEventListener('click',function () {
+                elAddContactBtn.classList.remove('hidden');
+                elAddContactBtn.setAttribute('type', 'submit')
+                elFormBtnsWrapper.classList.add('hidden');
+                // profile image 
+                elContactProfileParent.setAttribute('style', 'background-image:url(../images/profile-img.jpg);');
+                elContactProfileImage.setAttribute('src', './images/profile-img.jpg');
+                // inputs value 
+                elNameInput.value = '';
+                elPhoneNumberInput.value = '';
+                elRealtionshipInput.value = '';
+                elEmailInput.value = '';
+                elContactFormTextarea.value = '';
+            });
+        });
+    });
     const elInfoBtn = document.querySelectorAll('.contact-info-btn');
 });
-// list and form 
-elFormParent.classList.toggle('form-parent-run');
-elListParent.classList.toggle('list-parent-run');
+elContactAddBtn.addEventListener('click', () => {
+    // list and form 
+    elFormParent.classList.toggle('form-parent-run');
+    elListParent.classList.toggle('list-parent-run');
 
-// dark filter 
-elListParent.classList.toggle('hidden-and-dark');
+    // dark filter 
+    elListParent.classList.toggle('hidden-and-dark');
 
-// icons 
-elContactAddIcon.classList.toggle('hidden');
-elListParentcon.classList.toggle('hidden');
+    // icons 
+    elContactAddIcon.classList.toggle('hidden');
+    elListParentcon.classList.toggle('hidden');
+});

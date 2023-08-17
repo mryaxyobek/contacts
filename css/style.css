@@ -351,8 +351,8 @@ a {
     border-radius: 10px;
     background: #394867;
 }
-
-.add-contact-btn {
+.add-contact-btn,.cancel-btn,.confirm-btn {
+    width: 100%;
     border-radius: 6px;
     padding: 8px;
     background: #394867;
@@ -361,8 +361,17 @@ a {
     transition: opacity 0.4s ease;
 }
 
-.add-contact-btn:active {
+.add-contact-btn:active,.cancel-btn:active,.confirm-btn:active {
     opacity: 0.7;
+}
+.form-buttons-wrapper{
+    display:grid;
+    grid-template-columns: auto auto;
+    gap: 10px;
+}
+.cancel-btn{
+    background: transparent;
+    color: var(--heading-color);
 }
 
 /* list  */
